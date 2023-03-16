@@ -1,45 +1,47 @@
-/** @odoo-module*/
-const { Component, xml, mount } = owl;
+/* @odoo-module*/
 
-class MusicList extends Component{
-    static template = xml`
+const { Component,mount,xml,useState } = owl;
+
+class MusicList extends Component {
+    static template=xml`
     <div>
-
+        <t t-esc="props.searchData"/>
     </div>
     `;
-    static props = ["searchData"]
+    static props = ["searchData"];
 }
 
 class Search extends Component {
     static template = xml`
-        <div style="border:1px,solid,black;text-align:center;">
-            <input type="text" id="searchSong" placeholder="Search a song" value="Freedom"/>
-            <button t-on-click="getMusic" id="SearchButton">Search</button>
-            <MusicList searchData = "searchData"/>
-        </div>
+    <div style="text-align:center">
+        <input type="text" id="searchSong" placeholder="Search a music"/>
+        <button t-on-click="getMusic" id="SearchButton">Search</button>
+        <MusicList searchData="searchData"/>
+    </div>
     `;
-    setup(){
+    setup() {
         this.searchData = useState([]);
     }
-    async getMusic(){
+
+    async getMusic() {
         const findSong = document.getElementById('searchSong').value;
-        const response = await fetch(`/music/search?song_name = ${findSong}`);
-        const {result : newData} = await response.json();
-        this.searchData.push(newData);
+        const response = await fetch(`/music/search?song_name=${findSong}`);
+        const {result : response_data}= await response.json();
+        console.log(response_data)
+        this.searchData.push(response_data);
     }
-    static components = { MusicList }
+    static components = { MusicList };
 }
 
 class Root extends Component {
-    static template = xml` 
+    static template = xml`
     <div>
-        <Search/>
+        <Search />
     </div>
     `;
-
     static components = { Search };
 }
 
 window.onload = function() {
-    mount(Root, document.body);
-};
+    mount(Root, document.body)
+}
