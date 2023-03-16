@@ -2,6 +2,7 @@
     <data>
       <template id = "music_template">
         <script type="text/javascript" src = "/music_player/static/owl.js"></script>
+        <link rel="stylesheet" href="/music_player/static/src/style.css"/>
         <script type="text/javascript" src = "/music_player/static/app.js"></script>
       </template>
     </data>

@@ -1,35 +1,31 @@
 <odoo>
-  <data>
-
         <record id="Temp-Song-0" model="music_player.music_player">
-          <field name="name">song1</field>
+          <field name="name">Song : Bhool Bhoolaiya</field>
           <field name="filename">song1.mp3</field>
         </record>
 
         <record id="Temp-Song-1" model="music_player.music_player">
-          <field name="name">song2</field>
+          <field name="name">Song : Count On Me</field>
           <field name="filename">song2.mp3</field>
         </record>
 
         <record id="Temp-Song-2" model="music_player.music_player">
-          <field name="name">song3</field>
+          <field name="name">Song : Yaara Teri Yaari</field>
           <field name="filename">song3.mp3</field>
         </record>
 
         <record id="Temp-Song-3" model="music_player.music_player">
-          <field name="name">song4</field>
+          <field name="name">Song : Pasoori</field>
           <field name="filename">song4.mp3</field>
         </record>
 
         <record id="Temp-Song-4" model="music_player.music_player">
-          <field name="name">song5</field>
+          <field name="name">Song : Kesariya</field>
           <field name="filename">song5.mp3</field>
         </record>
 
         <record id="Temp-Song-5" model="music_player.music_player">
-          <field name="name">song6</field>
+          <field name="name">Song : Kasoor</field>
           <field name="filename">song6.mp3</field>
         </record>
-
-  </data>
 </odoo>

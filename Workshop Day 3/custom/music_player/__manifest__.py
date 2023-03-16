@@ -24,7 +24,7 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
     ],
@@ -34,4 +34,10 @@
     ],
     'installable':True,
     'application':True,
+
+    'assets': {
+        'web.assets_backend': [
+            'music_player/static/src/style.css',
+        ],
+    },
 }

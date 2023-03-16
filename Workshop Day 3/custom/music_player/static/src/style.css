@@ -1,0 +1,32 @@
+#img-btn{
+    height: 30px;
+}
+.card {
+    position: relative;
+    height: 120px;
+    border-radius: 20px;
+    width: 25rem;
+    background-color: rgb(19, 95, 110);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);  
+}
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);  
+    transition: all 0.2s ease-in;
+}
+
+.setButton{
+    position: relative;
+    top: 20px;
+}
+
+#play-song{
+    position: absolute;
+    right: 200px;
+    bottom: 20px;
+}
+
+#search-data{
+    margin-left: 150px;
+    margin-top: 30px;
+}
